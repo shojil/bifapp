@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.44.3\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="af9665a44df26b4098e24c934c1109507845ef5e">
+        <dex dex="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\pre-dexed\debug\classes-7175746a6cb53270873dde848c63525745f95070.jar" />
+    </item>
+    <item
+        jar="C:\Users\Arslan\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\3.0.0\5871fb60dc68d67da54a663c3fd636a10a532948\jsr305-3.0.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\pre-dexed\debug\jsr305-3.0.0-790f2321a1f277da54e7f4ffb585fc478a5ef449.jar" />
+    </item>
+    <item
+        jar="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\11.0.4\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="70ffe00aaf049893f59d1dad57bd82992faa38ef">
+        <dex dex="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\pre-dexed\debug\classes-c15a324ae2169b305bf103f380d59a5dd359e1c2.jar" />
+    </item>
+    <item
+        jar="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\11.0.4\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="364364bf77b4a71afc5930fc3ae57b3f0eea637c">
+        <dex dex="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\pre-dexed\debug\classes-d78873bb53fde1bf1a1f68c21687dd33cb3ca1ae.jar" />
+    </item>
+    <item
+        jar="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\11.0.4\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="2430e711762a749feb00b3d64858ca4768251b9d">
+        <dex dex="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\pre-dexed\debug\classes-7e78dec4d0b7f46ad894a6e6aa03333e93161e47.jar" />
+    </item>
+    <item
+        jar="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="fa0446a14ed5dd3725047d6399ffea771a564b30">
+        <dex dex="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\pre-dexed\debug\classes-7b6ffa1e9b9d82cd5dcce3a74dee6ace22418166.jar" />
+    </item>
+    <item
+        jar="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\exploded-aar\com.facebook.fresco\animated-webp\1.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="adfb92acadeeff1086115fff6b318e95df8b2b29">
+        <dex dex="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\pre-dexed\debug\classes-c8b3938574350211440759f625375f205fa0c5ac.jar" />
+    </item>
+    <item
+        jar="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\11.0.4\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d8942ee348aaa9341f08f7e2437063893fe27542">
+        <dex dex="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\pre-dexed\debug\classes-c8ae88bce647f329943c3d9b2487d7f90c1842fe.jar" />
+    </item>
+    <item
+        jar="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\exploded-aar\com.facebook.fbui.textlayoutbuilder\textlayoutbuilder\1.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
+        <dex dex="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\pre-dexed\debug\classes-cb6edbdab0c8949176c4684905906ee8ead02f66.jar" />
+    </item>
+    <item
+        jar="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-okhttp3\1.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ba9b39366b723ccff6359d1117332968e98a4aca">
+        <dex dex="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\pre-dexed\debug\classes-9d514a13de6e1fbefe5c3c691615b61feef71a65.jar" />
+    </item>
+    <item
+        jar="C:\Users\Arslan\.gradle\caches\modules-2\files-2.1\com.facebook.fbui.textlayoutbuilder\staticlayout-proxy\1.0\f162442a19fff13995fbd51ba414d9ee05579080\staticlayout-proxy-1.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
+        <dex dex="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\pre-dexed\debug\staticlayout-proxy-1.0-c032f0e586dffdfc95d7db5831bdd15ce878c569.jar" />
+    </item>
+    <item
+        jar="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\exploded-aar\com.facebook.fresco\animated-base-support\1.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ff84ecfe1dd78b98be147daaa042bc32219793b8">
+        <dex dex="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\pre-dexed\debug\classes-a7856502af05692c6ce1303f9019b3597e3c5348.jar" />
+    </item>
+    <item
+        jar="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\exploded-aar\com.facebook.fresco\fbcore\1.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="2668e49e4e31c7d451b76a36009b902bf44e0d70">
+        <dex dex="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\pre-dexed\debug\classes-d5ce370fe8f0ab2ba9e980a92adfa5c3e3bd0ec3.jar" />
+    </item>
+    <item
+        jar="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-iid\11.0.4\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="dd282bdeaa904c59d77e57dedd7e0a241c9b679d">
+        <dex dex="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\pre-dexed\debug\classes-58bb5e49f1982553f3404437d870d8844e668577.jar" />
+    </item>
+    <item
+        jar="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="67eb33110dbacb46a48175b08ae0c96761d2c17d">
+        <dex dex="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\pre-dexed\debug\classes-9bfba42849af535f9855a142c8a7137bcb2ce27a.jar" />
+    </item>
+    <item
+        jar="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.44.3\jars\libs\infer-annotations-1.5.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="dcac634e137395f79693ec760f081a86eb2bd84e">
+        <dex dex="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\pre-dexed\debug\infer-annotations-1.5-56ac49c7d58d3291cac3be2c2892f0079412ef04.jar" />
+    </item>
+    <item
+        jar="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-base\1.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="050f688115ea65a0292d8483a6ffe6bcdab1e2ef">
+        <dex dex="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\pre-dexed\debug\classes-27ce9df20a86295119e7eb7c6e2790bc07d4105a.jar" />
+    </item>
+    <item
+        jar="H:\BCILAPP\androidstudio\sdk\extras\android\m2repository\com\android\support\support-annotations\25.2.0\support-annotations-25.2.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4a5a82a027706397fff621b22fd6fa796e91d7c5">
+        <dex dex="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\pre-dexed\debug\support-annotations-25.2.0-9bd0832ed60cb083149e121cf40b08abd13c276e.jar" />
+    </item>
+    <item
+        jar="C:\Users\Arslan\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\pre-dexed\debug\library-2.4.0-845022aa27782a3cc2e239fde576ea30d9b14d99.jar" />
+    </item>
+    <item
+        jar="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline\1.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d9c4402c3057225d80cbbbec52154e7a25b0ebdf">
+        <dex dex="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\pre-dexed\debug\classes-582563dc198bb7615a788c32f7b27b4295c21c7a.jar" />
+    </item>
+    <item
+        jar="C:\Users\Arslan\.gradle\caches\modules-2\files-2.1\javax.inject\javax.inject\1\6975da39a7040257bd51d21a231b76c915872d38\javax.inject-1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\pre-dexed\debug\javax.inject-1-73cac152c44662263fc91d12f4c09e4adb07dd98.jar" />
+    </item>
+    <item
+        jar="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\exploded-aar\com.facebook.fresco\animated-base\1.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="13469de5eef4b3c0488c0e4963fef197fc745f8a">
+        <dex dex="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\pre-dexed\debug\classes-293dcce33dcba0b1eab579691ba06dd64bb805a3.jar" />
+    </item>
+    <item
+        jar="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\exploded-aar\com.facebook.fresco\webpsupport\1.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="03530f261b6f66dbcae414f12c732bd943f5ba53">
+        <dex dex="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\pre-dexed\debug\classes-e05c61c8035e535cd6da08d342459fbe56b6401d.jar" />
+    </item>
+    <item
+        jar="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ee394a892dd21c03a528139c1e8d4e0e1264ac84">
+        <dex dex="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\pre-dexed\debug\classes-eff3294fe4091f3b8f21efd5f70888ca9c20b235.jar" />
+    </item>
+    <item
+        jar="C:\Users\Arslan\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp-ws\3.4.1\8ace66ef7002d98f633377c9e67daeeb196d8c3b\okhttp-ws-3.4.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="8ace66ef7002d98f633377c9e67daeeb196d8c3b">
+        <dex dex="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\pre-dexed\debug\okhttp-ws-3.4.1-f06d3001d7b08de88c925450b6ae4fb5e632f40f.jar" />
+    </item>
+    <item
+        jar="C:\Users\Arslan\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\pre-dexed\debug\bolts-tasks-1.4.0-cba8d86697ebd621d79bb45891ff7052b862dd5c.jar" />
+    </item>
+    <item
+        jar="C:\Users\Arslan\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.9.0\f824591a0016efbaeddb8300bee54832a1398cfa\okio-1.9.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
+        <dex dex="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\pre-dexed\debug\okio-1.9.0-3ac570817619c51540ecaf8c6abe0f22c972a850.jar" />
+    </item>
+    <item
+        jar="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="8fe8a8f77d651982ce5e18f6187dc4daf914ac57">
+        <dex dex="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\pre-dexed\debug\classes-e542e7095ce52891cc347ce4fa331e367c5471f6.jar" />
+    </item>
+    <item
+        jar="C:\Users\Arslan\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.4.1\c7c4f9e35c2fd5900da24f9872e3971801f08ce0\okhttp-3.4.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
+        <dex dex="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\pre-dexed\debug\okhttp-3.4.1-18b7e00113a100a18eba4018271e17725375b25d.jar" />
+    </item>
+    <item
+        jar="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\pre-dexed\debug\classes-0b835432320b890734f38843def685b62fb1fff5.jar" />
+    </item>
+    <item
+        jar="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\exploded-aar\com.facebook.fresco\animated-gif\1.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="131115ec18ae3951c1584c543de8baa9ac20012a">
+        <dex dex="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\pre-dexed\debug\classes-1a6826efb94035b5df10d46ccf69678000977121.jar" />
+    </item>
+    <item
+        jar="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\exploded-aar\com.facebook.fresco\drawee\1.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="5a61f17cd72e20aa4323cbf5f909b7c609619275">
+        <dex dex="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\pre-dexed\debug\classes-a422e46f3e5cde62d752bc50242b677335ddc2f1.jar" />
+    </item>
+    <item
+        jar="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\pre-dexed\debug\classes-360e639dd6a73cf7fc6c6b58c6b3ce7eaf7e86d7.jar" />
+    </item>
+    <item
+        jar="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\exploded-aar\com.facebook.soloader\soloader\0.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\pre-dexed\debug\classes-d3fad94381d7bcb402e2785e34c8583ed752a3f3.jar" />
+    </item>
+    <item
+        jar="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\exploded-aar\BIFApp\react-native-device-info\unspecified\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="f0d6c6f248679450ef2e15e382fef65b6c7d191d">
+        <dex dex="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\pre-dexed\debug\classes-8001894ea1e5e5cc1fc4c58bd1240bf2c9e5b896.jar" />
+    </item>
+    <item
+        jar="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\exploded-aar\com.facebook.fresco\fresco\1.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="cf836a435a496eb22ff2aa69aa1e619462549f81">
+        <dex dex="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\pre-dexed\debug\classes-c26b9bdf9cf6f977d6854e3f0d84f85c6c4b10f7.jar" />
+    </item>
+    <item
+        jar="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\exploded-aar\BIFApp\react-native-vector-icons\unspecified\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="2da3a8f2487bb6161be962ebac90f29d282dab30">
+        <dex dex="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\pre-dexed\debug\classes-f547254fd4c1c8b10974eb9f1dd6a52b45bfb466.jar" />
+    </item>
+    <item
+        jar="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e820b7be8c035dd522da4bc822e8a76c8e27921a">
+        <dex dex="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\pre-dexed\debug\classes-a5c850052735c7f1d23ee61683ee0e302f4cf997.jar" />
+    </item>
+    <item
+        jar="C:\Users\Arslan\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp-urlconnection\3.4.1\63994437f62bc861bc20c605d12962f7246116d1\okhttp-urlconnection-3.4.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="63994437f62bc861bc20c605d12962f7246116d1">
+        <dex dex="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\pre-dexed\debug\okhttp-urlconnection-3.4.1-e454ddba5c2d01538f72c6379651f42791eedf73.jar" />
+    </item>
+
+</items>
