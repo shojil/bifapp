@@ -32,9 +32,21 @@ import TcombTextInput from '@components/tcomb/TextInput';
 import Switch1 from 'react-native-customisable-switch'
 import {Icon} from 'react-native-elements'
 import Permissions from 'react-native-permissions'
+import ImagePicker from 'react-native-image-picker'
 
 /* Component ==================================================================== */
 let redirectTimeout;
+
+var options = {
+  title: 'Select Avatar',
+  customButtons: [
+  ],
+  storageOptions: {
+    skipBackup: true,
+    path: 'images'
+  }
+};
+
 class BIFStep1 extends Component {
   static componentName = 'BIF Steps';
 
@@ -43,14 +55,22 @@ class BIFStep1 extends Component {
 
     this.state = {
       questionstate:false,
+      bankquestionstate:false,
+      utilityquestionstate:false,
+      photoquestionstate:false,
       selectoption: '',
-      initialPosition: 'unknown'
+      initialPosition: 'unknown',
+      billref:0
     };
 
     this.gprslocation.bind(this)
+    this.updateOption.bind(this)
+    this.refChange.bind(this)
   }
 
   componentDidMount = async () => {
+
+    console.log("Step  mountedd..... ")
     
   }
 
@@ -120,11 +140,104 @@ class BIFStep1 extends Component {
 
   }
 
+  updateOption = (value, qtype) => {
+
+    if(qtype == 'utilitybills')
+      this.setState({utilityquestionstate: value})
+    else if(qtype == 'bankacount')
+      this.setState({bankquestionstate: value})
+
+    if(value)
+    {
+      if(typeof this.props.wrapperform != 'undefined' && this.props.wrapperform)
+      {
+        this.props.wrapperform.disablenext()
+      }
+    }
+    else
+    {
+      if(typeof this.props.wrapperform != 'undefined' && this.props.wrapperform)
+      {
+        this.props.wrapperform.enablenext()
+      }
+    }
+  }
+
+  openCamera = (value) => {
+
+    this.setState({photoquestionstate: value})
+
+    console.log("open Camera = " + value)
+
+    if(value)
+    {
+      //console.log("Launch Camera .......")
+      //console.log(ImagePicker)
+
+      // Launch Camera: 
+      ImagePicker.launchCamera(options, (response)  => {
+        // Same code as in above section! 
+      });
+    }
+
+  }
+
+  refChange = (text) => {
+    let newText = '';
+    let numbers = '0123456789';
+
+    for (var i=0; i < text.length; i++) {
+         if(numbers.indexOf(text[i]) > -1 ) {
+              newText = newText + text[i];
+         }
+         else {
+               // your call back function
+               Alert.alert("please enter numbers only");
+          }
+         this.setState({ billref: newText });
+     }
+
+    if(newText.length == 4)
+    {
+      if(typeof this.props.wrapperform != 'undefined' && this.props.wrapperform)
+      {
+        this.props.wrapperform.enablenext()
+      }
+    }
+    else if(newText.length == 3)
+    {
+      if(typeof this.props.wrapperform != 'undefined' && this.props.wrapperform)
+      {
+        this.props.wrapperform.disablenext()
+      }
+    }
+  }
+
+  bankacChange = (text) => {
+    let newText = text;
+    
+    if(newText.length == 4)
+    {
+      if(typeof this.props.wrapperform != 'undefined' && this.props.wrapperform)
+      {
+        this.props.wrapperform.enablenext()
+      }
+    }
+    else if(newText.length == 3)
+    {
+      if(typeof this.props.wrapperform != 'undefined' && this.props.wrapperform)
+      {
+        this.props.wrapperform.disablenext()
+      }
+    }
+  }
+
   render = () => {
 
 
-
     var viewoption = (<Switch1 switchWidth={300} value={this.state.questionstate} onValueChange={(value) => this.setState({questionstate: value})} activeText={'Yes'} inactiveText={'No'} activeTextColor={'rgba(255, 255, 255, 1)'} inactiveTextColor={'rgba(255, 255, 255, 1)'} activeBackgroundColor={'rgba(50, 163, 50, 1)'} inactiveBackgroundColor={'rgba(137, 137, 137, 1)'} activeButtonBackgroundColor={'rgba(255, 255, 255, 1)'} inactiveButtonBackgroundColor={'rgba(255, 255, 255, 1)'} />)
+
+    const qustype = ((typeof this.props.questionobj != 'undefined' && typeof this.props.questionobj.type != 'undefined' && this.props.questionobj.type) ? this.props.questionobj.type : '')
 
 
     if(typeof this.props.questionobj != 'undefined' && typeof this.props.questionobj.type != 'undefined' && this.props.questionobj.type == 'detail')
@@ -138,6 +251,24 @@ class BIFStep1 extends Component {
         {typeof this.props.questionobj.list != 'undefined' && this.props.questionobj.list.length && this.props.questionobj.list.map((itm, ind) => <Picker.Item key={ind} label={itm} value={itm} />)}
 
       </Picker>)
+    }
+    else if(typeof this.props.questionobj != 'undefined' && typeof this.props.questionobj.type != 'undefined' && this.props.questionobj.type == 'utilitybills')
+    {
+      viewoption = (<View>
+      <Switch1 switchWidth={300} value={this.state.utilityquestionstate} onChangeValue={(value) => {this.updateOption(value, qustype)}} activeText={'Yes'} inactiveText={'No'} activeTextColor={'rgba(255, 255, 255, 1)'} inactiveTextColor={'rgba(255, 255, 255, 1)'} activeBackgroundColor={'rgba(50, 163, 50, 1)'} inactiveBackgroundColor={'rgba(137, 137, 137, 1)'} activeButtonBackgroundColor={'rgba(255, 255, 255, 1)'} inactiveButtonBackgroundColor={'rgba(255, 255, 255, 1)'} />
+      <Picker style={((this.state.utilityquestionstate) ? AppStyles.businesstype : {height:0} )} selectedValue={this.state.selectoption} onValueChange={(optval) => this.setState({selectoption: optval})}>
+        
+        {typeof this.props.questionobj.list != 'undefined' && this.props.questionobj.list.length && this.props.questionobj.list.map((itm, ind) => <Picker.Item key={ind} label={itm} value={itm} />)}
+
+      </Picker></View>)
+    }
+    else if(typeof this.props.questionobj != 'undefined' && typeof this.props.questionobj.type != 'undefined' && this.props.questionobj.type == 'bankaccount')
+    {
+      viewoption = (<Switch1 switchWidth={300} value={this.state.bankquestionstate} onChangeValue={(value) => {this.updateOption(value, qustype)}} activeText={'Yes'} inactiveText={'No'} activeTextColor={'rgba(255, 255, 255, 1)'} inactiveTextColor={'rgba(255, 255, 255, 1)'} activeBackgroundColor={'rgba(50, 163, 50, 1)'} inactiveBackgroundColor={'rgba(137, 137, 137, 1)'} activeButtonBackgroundColor={'rgba(255, 255, 255, 1)'} inactiveButtonBackgroundColor={'rgba(255, 255, 255, 1)'} />)
+    }
+    else if(typeof this.props.questionobj != 'undefined' && typeof this.props.questionobj.type != 'undefined' && this.props.questionobj.type == 'takephoto')
+    {
+      viewoption = (<Switch1 switchWidth={300} value={this.state.bankquestionstate} onChangeValue={(value) => {this.openCamera(value)}} activeText={'Yes'} inactiveText={'No'} activeTextColor={'rgba(255, 255, 255, 1)'} inactiveTextColor={'rgba(255, 255, 255, 1)'} activeBackgroundColor={'rgba(50, 163, 50, 1)'} inactiveBackgroundColor={'rgba(137, 137, 137, 1)'} activeButtonBackgroundColor={'rgba(255, 255, 255, 1)'} inactiveButtonBackgroundColor={'rgba(255, 255, 255, 1)'} />)
     }
 
     const parentform = ((typeof this.props.mainform != 'undefined') ? this.props.mainform  : false)
@@ -233,8 +364,18 @@ class BIFStep1 extends Component {
         <View>
           <View style={AppStyles.questionsheading}><Text style={AppStyles.questionsheadingtext}>{((typeof this.props.questionobj != 'undefined' && typeof this.props.questionobj.text != 'undefined') ? this.props.questionobj.text : "Question ?")}</Text></View>
           <View style={[AppStyles.centerAligned, {marginTop:10}]}>{viewoption}</View>
-          <View><Text style={AppStyles.textRemarks}>Remarks</Text></View>
-          <View><TextInput multiline={true} style={AppStyles.inputTextarea} underlineColorAndroid="transparent" /></View>
+          <View><Text style={AppStyles.textRemarks}>{((qustype == 'utilitybills' && this.state.utilityquestionstate) ? "Ref#" : ((qustype == 'bankaccount') ? "Bank A/C" : "Remarks"))}</Text></View>
+          <View>
+          {((qustype == 'utilitybills') ? 
+          (<TextInput multiline={true} value = {((this.state.billref.length) ? this.state.billref.toString(): '')} style={AppStyles.inputTextarea} underlineColorAndroid="transparent" onChangeText={(text) => {this.refChange(text)}} />)
+          :
+            ((qustype == 'bankaccount') ? 
+            (<TextInput multiline={true} style={AppStyles.inputTextarea} underlineColorAndroid="transparent" onChangeText={(text) => {this.bankacChange(text)}} />)
+            :  
+            (<TextInput multiline={true} style={AppStyles.inputTextarea} underlineColorAndroid="transparent" />)
+            )
+          )}
+          </View>
         </View>
       );
       }

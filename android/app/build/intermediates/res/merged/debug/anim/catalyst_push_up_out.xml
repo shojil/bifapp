@@ -11,4 +11,3 @@
           android:duration="@android:integer/config_shortAnimTime"
           />
 </set>
-<!-- From: file:/H:/BCILAPP/apps/bcilapp/bcil-app/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.44.3/res/anim/catalyst_push_up_out.xml -->

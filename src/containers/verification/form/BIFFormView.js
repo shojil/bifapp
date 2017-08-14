@@ -90,6 +90,7 @@ class BIFAuthForm extends Component {
       questions:[],
       newbusiness: false,
       locationLoading: false,
+      nextbtnenable: true,
       resultMsg: {
         status: '',
         success: '',
@@ -175,7 +176,7 @@ class BIFAuthForm extends Component {
       {text:'Is applicant owner?', type:'boolean'},
       {text:'Doc proof of ownership?', type:'boolean'},
       {text:'Applicant was present?', type:'boolean'},
-      {text:'Personal/business Bank A/C?', type:'boolean'},
+      {text:'Personal/business Bank A/C?', type:'bankaccount'},
       {text:'Account statement provided?', type:'boolean'},
       {text:'Account statement verified?', type:'boolean'},
       {text:'Business places?', type:'selection', list:['Owned', 'Family Owned', 'Rented', 'Others']},
@@ -186,9 +187,9 @@ class BIFAuthForm extends Component {
       ];
 
       var newbusqus = [
-      {text:'Lives at given address?', type:'boolean'},
+      {text:'Lives at given address?', type:'location'},
       {text:'Applicnat was present?', type:'boolean'},
-      {text:'Utility bills provided?', type:'boolean'},
+      {text:'Utility bills provided?', type:'utilitybills', list:['Electricity', 'Gas', 'Phone']},
       {text:'Residence is?', type:'selection', list:['Owned', 'Family Owned', 'Rented', 'Others']},
       {text:'Ownership docs seen/obtained?', type:'boolean'},
       {text:'NEIGHBOURHOOD VERIFICATION # 1?', type:'neighbourhood'},
@@ -355,6 +356,20 @@ class BIFAuthForm extends Component {
     })
   }
 
+  disablenext = () => {
+    //console.log("disalbe next button")
+    this.setState({
+      nextbtnenable: false
+    })
+  }
+
+  enablenext = () => {
+    //console.log("disalbe next button")
+    this.setState({
+      nextbtnenable: true
+    })
+  }
+
   render = () => {
     const Form = FormValidation.form.Form;
 
@@ -373,6 +388,7 @@ class BIFAuthForm extends Component {
     const parentform = ((typeof this.props.mainform != 'undefined') ? this.props.mainform  : false)
 
     const nextdisalbed = ((typeof this.props.nexteisalbe != 'undefined') ? this.props.nexteisalbe : false)
+    const onlynextdisalbed = ((this.state.nextbtnenable) ? !this.state.nextbtnenable : true)
 
     if(typeof this.props.applicantinfo != 'undefined')
     {
@@ -446,7 +462,7 @@ class BIFAuthForm extends Component {
 
           <Spacer size={20} />
 
-          {(( openstp < this.state.questions.length ) ? (<View style={{flexDirection:'column'}}><Button disabled={nextdisalbed} title={this.props.buttonTitle} style={{width:'40%', marginRight:'8%'}} onPress={((parentform) ? parentform.goNext :  console.log("Testing"))} /><Button title="Previous" style={{width:'40%'}} onPress={console.log("Testing")} /></View>) : (<Button title="Submit" onPress={this.handleSubmit} />) )}
+          {(( openstp < this.state.questions.length ) ? (<View style={{flexDirection:'column'}}><Button disabled={((nextdisalbed) ? nextdisalbed : ((onlynextdisalbed) ? onlynextdisalbed : nextdisalbed ))} title={this.props.buttonTitle} style={{width:'40%', marginRight:'8%'}} onPress={((parentform) ? parentform.goNext :  console.log("Testing"))} /><Button title="Previous" style={{width:'40%'}} onPress={console.log("Testing")} /></View>) : (<Button title="Submit" onPress={this.handleSubmit} />) )}
 
           <Spacer size={10} />
 

@@ -13,4 +13,3 @@
     </item>
     <item android:drawable="@drawable/common_google_signin_btn_text_dark_normal" />
 </layer-list>
-<!-- From: file:/H:/BCILAPP/apps/bcilapp/bcil-app/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.4/res/drawable/common_google_signin_btn_text_dark_focused.xml -->

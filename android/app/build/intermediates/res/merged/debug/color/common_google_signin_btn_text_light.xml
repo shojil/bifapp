@@ -12,4 +12,3 @@
     <item
         android:color="@color/common_google_signin_btn_text_light_default" />
 </selector>
-<!-- From: file:/H:/BCILAPP/apps/bcilapp/bcil-app/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.4/res/color/common_google_signin_btn_text_light.xml -->
