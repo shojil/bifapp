@@ -299,5 +299,15 @@ export default {
     paddingLeft:5, 
     paddingRight:5,
     borderRadius:5
-  }
+  },
+  signature: {
+        flex: 1,
+        borderColor: '#000033',
+        borderWidth: 1,
+    },
+    buttonStyle: {
+        flex: 1, justifyContent: "center", alignItems: "center", height: 50,
+        backgroundColor: "#eeeeee",
+        margin: 10
+    }
 };

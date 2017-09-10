@@ -11,6 +11,7 @@ import {
   ScrollView,
   AsyncStorage,
   TouchableOpacity,
+  TouchableHighlight,
   AndroidPermissions,
   Alert,
   Switch,
@@ -33,6 +34,7 @@ import Switch1 from 'react-native-customisable-switch'
 import {Icon} from 'react-native-elements'
 import Permissions from 'react-native-permissions'
 import ImagePicker from 'react-native-image-picker'
+import SignatureCapture from 'react-native-signature-capture'
 
 /* Component ==================================================================== */
 let redirectTimeout;
@@ -70,7 +72,7 @@ class BIFStep1 extends Component {
 
   componentDidMount = async () => {
 
-    console.log("Step  mountedd..... ")
+    //console.log("Step  mountedd..... ")
     
   }
 
@@ -350,11 +352,20 @@ class BIFStep1 extends Component {
             <View style={AppStyles.questionsheading}><Text style={AppStyles.questionsheadingtext}>{((typeof this.props.questionobj != 'undefined' && typeof this.props.questionobj.text != 'undefined') ? this.props.questionobj.text : "Question ?")}</Text></View>
             <View style={[AppStyles.centerAligned]}>{viewoption}</View>
             <View><Text style={AppStyles.textRemarks}>Remarks</Text></View>
-            <View style={[{borderWidth:1, borderColor:AppColors.border, borderRadius:5, flexDirection:'row'}]}>
+            <TouchableOpacity onPress={this.gprslocation} style={[{borderWidth:1, borderColor:AppColors.border, borderRadius:5, flexDirection:'row'}]}>
               {this.state.initialPosition != 'unknown' && (<Text style={{width:'70%', fontSize: ((getlatlong == "Location Not Found") ? 16 : 12), color: ((getlatlong == "Location Not Found") ? AppColors.locationiconcolor : AppColors.locationText)}}>{getlatlong}</Text>)}
-              <View style={{width:'20%'}}><Icon name='room' color={AppColors.locationiconcolor} onPress={this.gprslocation} />
-            </View>
-            </View>
+              <View style={{width:'20%'}}><Icon name='room' color={AppColors.locationiconcolor} /></View>
+            </TouchableOpacity>
+          </View>
+        );
+      }
+      else if(typeof this.props.questionobj != 'undefined' && typeof this.props.questionobj.type != 'undefined' && this.props.questionobj.type == 'confirmation')
+      {
+        return (
+          <View>
+            <View style={AppStyles.questionsheading}><Text style={AppStyles.questionsheadingtext}>{((typeof this.props.questionobj != 'undefined' && typeof this.props.questionobj.text != 'undefined') ? this.props.questionobj.text : "Question ?")}</Text></View>
+            <View style={{marginTop:5}}><Button title="Review" onPress={() => {((typeof this.props.wrapperform != 'undefined') ? this.props.wrapperform.reviewForm() :  console.log("Testing"))}} /></View>
+            <View style={{marginTop:5}}><Button title="Singature Please" onPress={() => {((typeof this.props.wrapperform != 'undefined') ? this.props.wrapperform.signaturePad() :  console.log("Testing"))}} /></View>
           </View>
         );
       }

@@ -36,6 +36,9 @@ import Permissions from 'react-native-permissions'
 import Geocoder from 'react-native-geocoding'
 import Setp1 from './BIFStep1'
 import Spinner from 'react-native-loading-spinner-overlay'
+import RNSignatureExample from './RNSignatureExample'
+import BIFReview from './BIFReview'
+import appvariables from '@constants/appvariables'
 
 /* Component ==================================================================== */
 let redirectTimeout;
@@ -91,6 +94,8 @@ class BIFAuthForm extends Component {
       newbusiness: false,
       locationLoading: false,
       nextbtnenable: true,
+      status: false,
+      _mounted: true,
       resultMsg: {
         status: '',
         success: '',
@@ -144,6 +149,12 @@ class BIFAuthForm extends Component {
     // Pre-populate any details stored in AsyncStorage
     const values = await this.getStoredCredentials();
 
+    appvariables.signaturePad = false
+
+    this.setState({
+      _mounted: true
+    })
+
     //console.log("Current User Info:")
     //console.log(values)
 
@@ -184,6 +195,7 @@ class BIFAuthForm extends Component {
       {text:'NEIGHBOURHOOD VERIFICATION # 1?', type:'neighbourhood'},
       {text:'NEIGHBOURHOOD VERIFICATION # 2?', type:'neighbourhood'},
       {text:'Photographs taken?', type:'takephoto'},
+      {text:'Confirmation', type:'confirmation'}
       ];
 
       var newbusqus = [
@@ -195,6 +207,7 @@ class BIFAuthForm extends Component {
       {text:'NEIGHBOURHOOD VERIFICATION # 1?', type:'neighbourhood'},
       {text:'NEIGHBOURHOOD VERIFICATION # 2?', type:'neighbourhood'},
       {text:'Photographs taken?', type:'takephoto'},
+      {text:'Confirmation', type:'confirmation'}
       ];
 
       if(this.props.applicantinfo.isNew.toLowerCase() == 'yes')
@@ -217,7 +230,19 @@ class BIFAuthForm extends Component {
 
   }
 
-  componentWillUnmount = () => clearTimeout(redirectTimeout);
+  componentWillUnmount = () => {
+
+    if(this.state._mounted)
+    {
+      this.setState({
+        _mounted: false
+      })
+    }
+
+    console.log("Component Unmounted:", this.state._mounted)
+
+    clearTimeout(redirectTimeout);
+  }
 
   /**
     * Get user data from AsyncStorage to populate fields
@@ -370,6 +395,32 @@ class BIFAuthForm extends Component {
     })
   }
 
+  signaturePad = () =>{
+
+    if(this.state._mounted)
+    {
+      this.setState({
+        status: !this.state.status
+      })
+
+      appvariables.signaturePad = true
+
+    }
+  }
+
+  reviewForm = () =>{
+
+    if(this.state._mounted)
+    {
+      this.setState({
+        status: !this.state.status
+      })
+
+      appvariables.reviewScreen = true
+
+    }
+  }
+
   render = () => {
     const Form = FormValidation.form.Form;
 
@@ -427,7 +478,17 @@ class BIFAuthForm extends Component {
       </View>)
     }
 
-    return (
+    if(appvariables.signaturePad)
+    {
+        return (<RNSignatureExample wrapperform={this} />)
+    }
+    else if(appvariables.reviewScreen)
+    {
+        return (<BIFReview allquestions={this.state.questions} wrapperform={this} />)
+    }
+    else
+    {
+      return (
       <ScrollView
         automaticallyAdjustContentInsets={false}
         ref={(a) => { this.scrollView = a; }}
@@ -462,13 +523,16 @@ class BIFAuthForm extends Component {
 
           <Spacer size={20} />
 
-          {(( openstp < this.state.questions.length ) ? (<View style={{flexDirection:'column'}}><Button disabled={((nextdisalbed) ? nextdisalbed : ((onlynextdisalbed) ? onlynextdisalbed : nextdisalbed ))} title={this.props.buttonTitle} style={{width:'40%', marginRight:'8%'}} onPress={((parentform) ? parentform.goNext :  console.log("Testing"))} /><Button title="Previous" style={{width:'40%'}} onPress={console.log("Testing")} /></View>) : (<Button title="Submit" onPress={this.handleSubmit} />) )}
+          {(( openstp < this.state.questions.length ) ? (<View style={[AppStyles.row, {justifyContent: 'space-between'}]}><Button title="Previous" onPress={console.log("Testing")} /><Button disabled={((nextdisalbed) ? nextdisalbed : ((onlynextdisalbed) ? onlynextdisalbed : nextdisalbed ))} title={this.props.buttonTitle} onPress={((parentform) ? parentform.goNext :  console.log("Testing"))} /></View>) : (<Button title="Submit" onPress={Actions.viewJobs} />) )}
 
           <Spacer size={10} />
 
         </Card>
       </ScrollView>
     );
+  }
+
+    
   }
 }
 

@@ -102,6 +102,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\exploded-aar\BIFApp\react-native-signature-capture\unspecified\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="50fd22cda886c28dfa24b0d0d33c8ef014681211">
+        <dex dex="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\pre-dexed\debug\BIFApp-react-native-signature-capture-unspecified_ea5072ad1ec0ce88a837e992533fb8be1356a2b7.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"

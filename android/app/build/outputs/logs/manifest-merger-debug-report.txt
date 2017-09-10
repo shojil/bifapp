@@ -53,6 +53,7 @@ MERGED from [com.facebook.fresco:animated-webp:1.0.1] H:\BCILAPP\apps\bcilapp\bc
 MERGED from [com.facebook.fresco:animated-base:1.0.1] H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\exploded-aar\com.facebook.fresco\animated-base\1.0.1\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:webpsupport:1.0.1] H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\exploded-aar\com.facebook.fresco\webpsupport\1.0.1\AndroidManifest.xml:5:5-7:41
 MERGED from [BIFApp:react-native-image-picker:unspecified] H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\exploded-aar\BIFApp\react-native-image-picker\unspecified\AndroidManifest.xml:7:5-9:41
+MERGED from [BIFApp:react-native-signature-capture:unspecified] H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\exploded-aar\BIFApp\react-native-signature-capture\unspecified\AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.44.3] H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.44.3\AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:appcompat-v7:23.0.1] H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-v4:25.2.0] H:\BCILAPP\apps\bcilapp\bcil-app\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.2.0\AndroidManifest.xml:21:5-23:54
